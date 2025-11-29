@@ -1,11 +1,10 @@
-// TODO 
+- [ ] Vue reschaschieren
+- [ ] Vue richtig einrichten
+- [ ] TypeScript Syntax lernen
+- [ ] Lebenlsauf basis erstellen
+- [ ] Vue vorhergesehen benutzen
+- [ ] Typescript einbeziehen
 
-
-
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
 ## Recommended Browser Setup
 
