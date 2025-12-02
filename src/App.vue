@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import Starter from "./components/Start.vue";
+import Home from "./components/Home.vue";
 import Nav from "./components/Navbar.vue";
+import Projekte from "./components/Projekte.vue";
+import Skills from "./components/Skills.vue";
 </script>
 
 <template>
   <Nav />
-  <Starter />
+  <Home />
+  <Projekte />
+  <Skills />
 </template>
 
 <style scoped>
 /* hier kannst du später Styles für die Seite machen */
-
 </style>

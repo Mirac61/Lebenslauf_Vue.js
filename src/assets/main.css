@@ -9,29 +9,30 @@
   --hover: #b4befe;
   --accent: rgb(198, 160, 246);
   --font: "JetBrains Mono", monospace;
-
-  /* NEU: für Blur/Glas und Glow */
   --glas-bg: rgba(17, 17, 27, 0.78);
   --glas-border: rgba(148, 163, 184, 0.35);
 }
 
 body {
   margin: 0;
-  font-family: var(--font);
+  background: var(--background);
   color: var(--text-color);
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(180, 190, 254, 0.18),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(203, 166, 247, 0.16),
-      transparent 55%
-    ),
-    linear-gradient(135deg, var(--body), var(--background));
-  min-height: 100vh;
+  font-family: var(--font);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background: linear-gradient(
+    130deg,
+    rgba(203, 166, 247, 0.08) 0%,
+    rgba(180, 190, 254, 0.05) 40%,
+    rgba(17, 17, 27, 0) 80%
+  );
 }
 
 #app {
@@ -49,31 +50,5 @@ body {
   #app {
     display: block;
     padding: 2rem;
-  }
-}
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }

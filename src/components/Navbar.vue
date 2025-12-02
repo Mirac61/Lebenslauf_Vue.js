@@ -1,13 +1,9 @@
-<script setup lang="ts">
-// Später kannst du hier z. B. Scroll-Logik, Aktive Section, Darkmode usw. reinpacken.
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <nav class="navbar">
     <div class="navbar-innen">
-      <div class="navbar-name">
-        <li><a>Mirac Sancak</a></li>
-      </div>
+      <div class="navbar-logo">Mirac Sancak</div>
 
       <ul class="navbar-links">
         <li><a href="#home">Home</a></li>
@@ -15,7 +11,7 @@
         <li><a href="#faehigkeiten">Fähigkeiten</a></li>
         <li><a href="#werdegang">Werdegang</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="#lebenslauf">Lebenslauf</a></li>
+        <li><a href="#lebenslauf" class="nav-button">Lebenslauf</a></li>
       </ul>
     </div>
   </nav>
@@ -24,20 +20,22 @@
 <style scoped>
 .navbar {
   position: fixed;
-  max-width: 98%;
-  width: 96%;
-
-  top: 10px;
-  height: 70px;
+  top: 20px;
   left: 0;
   right: 0;
 
+  max-width: 98%;
+  width: 96%;
   margin: 0 auto;
-  justify-content: center;
-  background: var(--glas-bg);
+
+  height: 80px;
   display: flex;
   align-items: center;
-  border-radius: 25px;
+
+  background: var(--glas-bg);
+  border-radius: 30px;
+  backdrop-filter: blur(18px);
+  z-index: 200;
 }
 
 .navbar-innen {
@@ -48,28 +46,23 @@
   align-items: center;
 }
 
+.navbar-logo {
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 32px;
-  padding: 0;
-  margin: 0 auto;
-  text-align: ce;
+  gap: 22px;
 }
 
 .navbar-links a {
-  display: inline-block; /* wichtig für transform */
   color: var(--text-color);
-  font-size: 16px;
   text-decoration: none;
-  font-family: var(--font);
-  border: none;
-  background: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease; /* transform mit-animieren */
+  font-size: 18px;
+  transition: 0.2s;
 }
 
 .navbar-links a:hover {
@@ -77,19 +70,9 @@
   transform: translateY(-1px);
 }
 
-.navbar-links a.active {
-  color: var(--detail);
-}
-
-@media (max-width: 800px) {
-  .navbar-links {
-    gap: 18px;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar-links {
-    display: none;
-  }
+.nav-button {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--detail);
 }
 </style>
