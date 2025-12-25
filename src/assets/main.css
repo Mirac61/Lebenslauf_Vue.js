@@ -1,5 +1,30 @@
 @import "./base.css";
 
+/* Animierbarer Winkel für den Gradient */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateGradient {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes floatGradient {
+  0% {
+    transform: translate3d(0%, 0%, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(-3%, 1%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(2%, -2%, 0) scale(1.08);
+  }
+}
+
 /* Catppuccin / JetBrains Setup */
 :root {
   --background: #11111b;
@@ -23,16 +48,29 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  inset: -15%;
   pointer-events: none;
   z-index: -1;
 
-  background: linear-gradient(
-    130deg,
-    rgba(203, 166, 247, 0.08) 0%,
-    rgba(180, 190, 254, 0.05) 40%,
-    rgba(17, 17, 27, 0) 80%
+  background: conic-gradient(
+    from var(--angle),
+    rgba(108, 112, 134, 0.18),
+    /* overlay2 / grau */ rgba(88, 91, 112, 0.14),
+    /* overlay1 */ rgba(69, 71, 90, 0.1),
+    /* overlay0 */ rgba(203, 166, 247, 0.12),
+    /* mauve */ rgba(180, 190, 254, 0.12),
+    /* lavender */ rgba(30, 30, 46, 0.1),
+    /* base */ rgba(24, 24, 37, 0.14),
+    /* mantle */ rgba(108, 112, 134, 0.18)
   );
+
+  filter: blur(50px);
+  opacity: 0.45;
+  transform: scale(1.05);
+
+  animation:
+    rotateGradient 32s linear infinite,
+    floatGradient 20s ease-in-out infinite alternate;
 }
 
 #app {

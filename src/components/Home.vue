@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import githubLogo from "@/assets/githubmark.png";
-import linkedinLogo from "@/assets/linkedin.png";
+import githubLogo from "@/assets/logos/githubmark.png";
+import linkedinLogo from "@/assets/logos/linkedin.png";
 </script>
 
 <template>
