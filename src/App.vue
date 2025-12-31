@@ -3,6 +3,7 @@ import Home from "./components/Home.vue";
 import Nav from "./components/Navbar.vue";
 import Projekte from "./components/Projekte.vue";
 import Skills from "./components/Skills.vue";
+import Werdegang from "./components/Werdegang.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import Skills from "./components/Skills.vue";
   <Home />
   <Projekte />
   <Skills />
+  <Werdegang />
 </template>
 
 <style scoped>

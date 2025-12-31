@@ -8,7 +8,7 @@
       <ul class="navbar-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projekte">Projekte</a></li>
-        <li><a href="#faehigkeiten">Fähigkeiten</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#werdegang">Werdegang</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <li><a href="#lebenslauf" class="nav-button">Lebenslauf</a></li>

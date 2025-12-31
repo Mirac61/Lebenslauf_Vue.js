@@ -94,10 +94,6 @@ onUnmounted(() => {
   <section id="projekte" class="projekte">
     <div class="sektion-innen">
       <h2 class="sektion-titel">Projekte</h2>
-      <p class="sektion-subtitle">
-        Eine kleine Auswahl meiner aktuellen Projekte – mit Fokus auf sauberes
-        UI, echte Use-Cases und lesbaren Code.
-      </p>
 
       <div class="box-grid">
         <article v-for="(p, i) in projects" :key="p.title" class="box">
@@ -112,7 +108,6 @@ onUnmounted(() => {
             </Transition>
           </div>
 
-          <!-- Content unten -->
           <div class="content">
             <div class="top-row">
               <h3 class="title">{{ p.title }}</h3>
@@ -175,15 +170,12 @@ onUnmounted(() => {
 }
 
 .sektion-titel {
-  font-size: 32px;
+  font-size: 64px;
   font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.sektion-subtitle {
-  margin-bottom: 28px;
-  font-size: 14px;
-  opacity: 0.85;
+  margin-bottom: 60px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--detail);
 }
 
 /* 3 pro Reihe */
